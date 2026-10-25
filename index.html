@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire de Contact</title>
+    <title>Réservation</title>
     <style>
         body { font-family: sans-serif; max-width: 500px; margin: 40px auto; padding: 20px; }
         .form-group { margin-bottom: 15px; }
@@ -61,74 +61,82 @@
     </style>
 </head>
 <body>
+    <h1>Informations</h1>
 
+    <p>Si vous le souhaitez, il est possible de réserver par anticipation à l’aide du formulaire ( voir le lien dans le menu ou au pied de la page )</p>
+    
+    <h2>Actualité</h2>
+    
     <!-- Conteneur principal du formulaire -->
     <div id="form-container">
-        <h2>Contactez-nous</h2>
+        <h2>Réservation</h2>
+
+        <p>Si vous le souhaitez, il est possible de réserver par anticipation à l’aide du formulaire
+Les champs marqués avec ( * ) sont requis</p>
         
         <form id="contact-form">
             <div class="form-group">
-                <label for="nom">Nom :</label>
+                <label for="nom">Nom *</label>
                 <input type="text" id="nom" name="fi-sender-lastName" required>
             </div>
 
             <div class="form-group">
-                <label for="prenom">Prénom :</label>
+                <label for="prenom">Prénom *</label>
                 <input type="text" id="prenom" name="fi-sender-firstName" required>
             </div>
 
             <div class="form-group">
-                <label for="email">Email :</label>
+                <label for="email">Email *</label>
                 <input type="email" id="email" name="fi-sender-email" required>
             </div>
 
             <div class="form-group">
-                <label for="telephone">Téléphone :</label>
+                <label for="telephone">Téléphone</label>
                 <input type="tel" id="telephone" name="fi-sender-phone" placeholder="+33612345678">
             </div>
 
             <div class="form-group">
-                <label for="adresse">Adresse :</label>
+                <label for="adresse">Adresse *</label>
                 <input type="text" id="adresse" name="fi-sender-address" required>
             </div>
 
             <div class="form-group">
-                <label for="code-postal">Code postal :</label>
+                <label for="code-postal">Code postal *</label>
                 <input type="text" id="code-postal" name="fi-sender-postcode" required>
             </div>
 
             <div class="form-group">
-                <label for="ville">Ville :</label>
+                <label for="ville">Ville *</label>
                 <input type="text" id="ville" name="fi-sender-city" required>
             </div>
 
             <div class="form-group">
-                <label for="profession">Profession :</label>
-                <input type="text" id="profession" name="fi-sender-position">
+                <label for="profession">Profession *</label>
+                <input type="text" id="profession" name="fi-sender-position" required>
             </div>
 
             <div class="form-group">
-                <label for="entreprise">Entreprise :</label>
-                <input type="text" id="entreprise" name="fi-sender-company">
+                <label for="entreprise">Entreprise *</label>
+                <input type="text" id="entreprise" name="fi-sender-company" required>
             </div>
             
             <div class="form-group">
-                <label for="piece-jointe-ci">Pièces jointes ( copie de carte d’identité recto et verso ) :</label>
+                <label for="piece-jointe-ci">Pièces jointes ( copie de carte d’identité recto et verso ) </label>
                 <input type="file" id="piece-jointe-ci" name="fi-file-documents-ci[]" multiple>
             </div>
 
             <div class="form-group">
-                <label for="piece-jointe-paie">Pièces jointes ( 3 dernières fiches de paie / 3 dernières déclarations Urssaf / bilans ) :</label>
+                <label for="piece-jointe-paie">Pièces jointes ( 3 dernières fiches de paie / 3 dernières déclarations Urssaf / bilans ) </label>
                 <input type="file" id="piece-jointe-paie" name="fi-file-documents-paie[]" multiple>
             </div>
 
             <div class="form-group">
-                <label for="piece-jointe-dom">Pièces jointes  ( justificatif de domicile, exemple facture d’électricité, avis d'imposition ) :</label>
+                <label for="piece-jointe-dom">Pièces jointes  ( justificatif de domicile, exemple facture d’électricité, avis d'imposition ) </label>
                 <input type="file" id="piece-jointe-dom" name="fi-file-documents-dom[]" multiple>
             </div>
 
             <div class="form-group">
-                <label for="piece-jointe-morale">Pièces jointes  ( Kbis, Inpi pour les entreprises ) :</label>
+                <label for="piece-jointe-morale">Pièces jointes  ( Kbis, Inpi pour les entreprises ) </label>
                 <input type="file" id="piece-jointe-morale" name="fi-file-documents-morale[]" multiple>
             </div>
             
