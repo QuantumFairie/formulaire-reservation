@@ -14,6 +14,14 @@
             border-radius: 8px;
             overflow: hidden; /* Assure que la carte respecte les coins arrondis */
         }
+
+        .virtual-tour-container {
+            width: 100%;
+            margin-top: 20px; /* Espace entre la carte du dessus et la visite virtuelle */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
         
         .form-group { margin-bottom: 15px; }
         label { display: block; margin-bottom: 5px; font-weight: normal; }
@@ -98,6 +106,20 @@
     <h2>Description</h2>
     <p>Le commerce est situé 331 rue de Pont à Mousson 57950 Montigny les Metz</p>
     <p>&nbsp;</p>
+
+    <h2>Visite Virtuelle</h2>
+    <div class="virtual-tour-container">
+        <iframe 
+            src="https://quantumfairie.github.io/visite-virtuelle-pam-rdc/&z=15&output=embed" 
+            width="100%" 
+            height="400" 
+            style="border:0; border-radius: 8px;" 
+            allowfullscreen="true" 
+            allow="accelerometer; gyroscope; magnetometer; vr"
+        </iframe>
+    </div>
+    <p>&nbsp;</p>
+    
     
     <!-- Conteneur principal du formulaire -->
     <div id="form-container">
