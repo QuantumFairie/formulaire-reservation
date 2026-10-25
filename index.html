@@ -6,6 +6,15 @@
     <title>Réservation</title>
     <style>
         body { font-family: sans-serif; max-width: 500px; margin: 40px auto; padding: 20px; }
+
+        .map-container {
+            width: 100%;
+            margin-bottom: 30px; /* Espace entre la carte et le titre du formulaire */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden; /* Assure que la carte respecte les coins arrondis */
+        }
+        
         .form-group { margin-bottom: 15px; }
         label { display: block; margin-bottom: 5px; font-weight: bold; }
         input[type="text"], input[type="email"], input[type="tel"], input[type="file"] {
@@ -66,6 +75,21 @@
     
     <h2>Actualité</h2>
     <p>Si vous le souhaitez, il est possible de réserver par anticipation à l’aide du formulaire ( voir le lien dans le menu ou au pied de la page )</p>
+
+    <div class="map-container">
+        <iframe 
+            src="https://google.com?
+            q=49.09553757947416,6.138041819786913
+            &z=15
+            &output=embed" 
+            width="100%" 
+            height="300" 
+            style="border:0; border-radius: 8px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
     
     <!-- Conteneur principal du formulaire -->
     <div id="form-container">
