@@ -17,34 +17,35 @@
 </head>
 <body>
 
-    <h2>Contact</h2>
+    <h2>Contactez-nous</h2>
     
-    <!-- Formulaire connecté à votre identifiant Forminit -->
     <form action="https://forminit.com/f/n7fmtdnb4kc" method="POST" enctype="multipart/form-data">
         
+        <!-- Bloc Expéditeur (sender) : Utilisé pour créer la fiche contact dans Forminit -->
         <div class="form-group">
             <label for="nom">Nom :</label>
-            <input type="text" id="nom" name="nom" required>
+            <input type="text" id="nom" name="fi-sender-lastName" required>
         </div>
 
         <div class="form-group">
             <label for="prenom">Prénom :</label>
-            <input type="text" id="prenom" name="prenom" required>
+            <input type="text" id="prenom" name="fi-sender-firstName" required>
         </div>
 
         <div class="form-group">
             <label for="email">Email :</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="fi-sender-email" required>
         </div>
 
         <div class="form-group">
             <label for="telephone">Téléphone :</label>
-            <input type="tel" id="telephone" name="telephone">
+            <input type="tel" id="telephone" name="fi-sender-phone">
         </div>
 
+        <!-- Bloc Fichier (file) : Obligatoire pour téléverser une pièce jointe -->
         <div class="form-group">
             <label for="piece-jointe">Pièce jointe :</label>
-            <input type="file" id="piece-jointe" name="piece-jointe" required>
+            <input type="file" id="piece-jointe" name="fi-file-document" required>
         </div>
 
         <button type="submit">Soumettre</button>
