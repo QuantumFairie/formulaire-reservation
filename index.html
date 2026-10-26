@@ -182,9 +182,10 @@
 
             <div class="form-group">
                 <label for="message">Votre message</label>
-                <textarea id="message" name="fi-sender-message" rows="5" placeholder="Saisissez votre message ici..."></textarea>
+                <!-- Remplir 100% de la largeur du formulaire parent -->
+                <textarea id="message" name="fi-sender-message" rows="5" style="width: 100%; max-width: 500px;" placeholder="Ecrivez ici..."></textarea>
             </div>
-            
+
             <div class="form-group">
                 <label for="piece-jointe-ci">Pièces jointes ( copie de carte d’identité recto et verso ) </label>
                 <input type="file" id="piece-jointe-ci" name="fi-file-documents-ci[]" multiple>
