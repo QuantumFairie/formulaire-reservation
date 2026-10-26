@@ -179,6 +179,11 @@
                 <label for="entreprise">Entreprise <span class="required-star">*</span></label>
                 <input type="text" id="entreprise" name="fi-sender-company" required>
             </div>
+
+            <div class="form-group">
+                <label for="message">Votre message</label>
+                <textarea id="message" name="fi-sender-message" rows="5" placeholder="Saisissez votre message ici..."></textarea>
+            </div>
             
             <div class="form-group">
                 <label for="piece-jointe-ci">Pièces jointes ( copie de carte d’identité recto et verso ) </label>
@@ -199,6 +204,8 @@
                 <label for="piece-jointe-morale">Pièces jointes  ( Kbis, Inpi pour les entreprises ) </label>
                 <input type="file" id="piece-jointe-morale" name="fi-file-documents-morale[]" multiple>
             </div>
+
+            <input type="hidden" id="fi-sender-ip" name="fi-sender-ip" value="">
             
             <button type="submit" id="submit-btn">Soumettre</button>
         </form>
@@ -238,6 +245,16 @@
             }
             return messageAnglais; // Renvoie l'erreur brute si non répertoriée
         }
+        
+        // Appelle une API publique pour obtenir l'IP du visiteur
+        fetch('https://ipify.org')
+            .then(response => response.json())
+            .then(data => {
+                // Injecte l'IP trouvée dans la valeur du champ caché
+                document.getElementById('fi-sender-ip').value = data.ip;
+            })
+            .catch(error => console.error("Impossible de récupérer l'IP :", error));
+        
 
         // Gestionnaire du formulaire
         document.getElementById('contact-form').addEventListener('submit', async function(e) {
